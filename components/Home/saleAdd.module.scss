@@ -1,0 +1,74 @@
+@import "../../scss/mixens/mixens";
+@import "../../scss/functions/functions";
+.saleAdd {
+  margin-top: rem(60px);
+  height: 290px;
+  background: #cccccc;
+  display: flex;
+  align-items: center;
+  position: relative;
+  &__center {
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%) rotate(45deg);
+    background: #fff;
+    box-shadow: 0 0 10px 0px rgba(0, 0, 0, 0.2);
+    &__inner {
+      transform: rotate(-45deg);
+      position: absolute;
+      left: 0;
+      top: 0;
+      z-index: 1;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      span {
+        display: block;
+        font-size: rem(16px);
+        text-transform: uppercase;
+      }
+      h4 {
+        font-style: italic;
+        text-transform: uppercase;
+        font-size: rem(60px);
+        padding-block: rem(4px);
+        margin-block: rem(5px);
+        border-block: 2px solid var(--gray);
+        font-weight: 700;
+      }
+      i {
+        font-size: rem(30px);
+        font-weight: 800;
+        margin-bottom: rem(5px);
+        text-transform: uppercase;
+      }
+    }
+  }
+  h3 {
+    font-size: rem(50px);
+    text-transform: uppercase;
+    font-weight: 800;
+    font-style: italic;
+    letter-spacing: 3px;
+    position: relative;
+    z-index: 0;
+    &::before {
+      content: "";
+      position: absolute;
+      width: 1px;
+      height: 180px;
+      background: var(--theme);
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%) rotate(45deg);
+      z-index: -1;
+    }
+  }
+}

@@ -1,0 +1,71 @@
+@import "../../scss/mixens/mixens";
+@import "../../scss/functions/functions";
+.aside {
+  h3 {
+    font-size: rem(24px);
+    font-weight: bold;
+    font-style: italic;
+    position: relative;
+    width: max-content;
+    margin-bottom: rem(30px);
+    &::before {
+      content: "";
+      position: absolute;
+      width: 18px;
+      height: 2px;
+      right: -33px;
+      background: var(--theme);
+      bottom: 0px;
+    }
+  }
+  .cart {
+    margin-bottom: rem(40px);
+    .collectionCard {
+      display: flex;
+      position: relative;
+      padding-top: rem(40px);
+      padding-bottom: rem(25px);
+      border-bottom: 1px solid rgb(195, 195, 195);
+      &__image {
+        flex: 0 0 90px;
+        margin-right: rem(10px);
+        img {
+        }
+      }
+      h4 {
+        @include truncate(1);
+        font-size: rem(16px);
+        font-weight: bold;
+        cursor: pointer;
+        & + span {
+          font-size: rem(14px);
+        }
+      }
+      &__delete {
+        position: absolute;
+        top: 10px;
+        border: none;
+        background-color: transparent;
+        i {
+          font-size: rem(16px);
+          &:hover {
+            color: var(--red);
+          }
+        }
+      }
+    }
+    .innerButton {
+      margin-top: rem(15px);
+      button,
+      a {
+        display: block;
+        width: 100%;
+        margin-block: rem(10px);
+        font-size: rem(14px);
+      }
+    }
+  }
+  .filter {
+    margin-bottom: rem(40px);
+  }
+}

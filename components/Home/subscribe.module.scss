@@ -1,0 +1,41 @@
+@import "../../scss/mixens/mixens";
+@import "../../scss/functions/functions";
+.subscribe {
+  position: relative;
+  margin-top: rem(100px);
+  .inner {
+    border: 5px dashed var(--gray);
+    padding: rem(20px) rem(90px);
+    min-height: 250px;
+    display: flex;
+    align-items: center;
+    .title {
+      position: absolute;
+      top: -33px;
+      padding: rem(15px) rem(50px);
+      background-color: #fff;
+      left: 50%;
+      transform: translateX(-50%);
+      text-align: center;
+      h4 {
+        font-size: rem(35px);
+        font-weight: 800;
+        font-style: italic;
+      }
+      span {
+        font-size: rem(18px);
+        font-weight: 500;
+      }
+    }
+  }
+  form {
+    width: 100%;
+    margin-top: rem(40px);
+    input[type="submit"] {
+      &:hover,
+      &:focus {
+        color: #fff !important;
+      }
+    }
+  }
+}

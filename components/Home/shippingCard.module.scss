@@ -1,0 +1,89 @@
+@import "../../scss/mixens/mixens";
+@import "../../scss/functions/functions";
+
+.shippingCard {
+  margin-top: 100px;
+  .innerCard {
+    padding: rem(20px);
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 220px;
+    border: 2px solid var(--gray);
+    cursor: pointer;
+    transition: 0.3s ease all;
+    &__upper {
+      width: 115px;
+      height: 115px;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      transition: 0.3s ease all;
+      i {
+        font-size: 20px;
+      }
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+        width: 2px;
+        background: var(--gray);
+        height: 115px;
+        top: 0;
+        transition: 0.3s ease all;
+      }
+      &::before {
+        transform: rotate(-45deg);
+        left: 38%;
+      }
+      &::after {
+        transform: rotate(45deg);
+        right: 38%;
+      }
+    }
+    &__lower {
+      width: 115px;
+      height: 115px;
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+      transition: 0.3s ease all;
+      &__details {
+        text-align: center;
+        h3 {
+          font-style: italic;
+        }
+      }
+    }
+    &:hover {
+      flex-direction: column-reverse;
+      border-color: var(--theme);
+      box-shadow: 6px 6px 0 var(--theme);
+      .innerCard__upper {
+        align-items: flex-end;
+        margin-bottom: 20px;
+        i {
+          color: var(--theme) !important;
+        }
+        &::before,
+        &::after {
+          background: var(--theme);
+          top: unset;
+          bottom: 0;
+        }
+        &::before {
+          transform: rotate(45deg);
+        }
+        &::after {
+          transform: rotate(-45deg);
+        }
+      }
+      .innerCard__lower {
+        align-items: flex-start;
+      }
+    }
+  }
+}

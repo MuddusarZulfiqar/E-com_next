@@ -1,0 +1,60 @@
+@import '../../scss/mixens/mixens';
+@import '../../scss/functions/functions';
+
+.mainbanner {
+  height: 80vh;
+  background-color: black;
+  position: relative;
+  .slides {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    &_item {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      div {
+        height: 100%;
+        width: 100%;
+      }
+    }
+    &__itemBackground {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      z-index: 0;
+      img {
+        width: 100%;
+        height: 100% !important;
+        object-fit: cover;
+        object-position: top center;
+      }
+    }
+    &__mainContent {
+      z-index: 1;
+      display: flex;
+      text-align: center;
+      height: 100%;
+      align-items: center;
+      position: relative;
+      justify-content: center;
+      div {
+        width: unset;
+        height: unset;
+      }
+    }
+  }
+  .subtitle {
+    font-size: rem(35px);
+    margin-top: rem(20px);
+    font-weight: 600;
+    margin-bottom: 0;
+  }
+  .title {
+    font-size: rem(60px);
+    font-weight: 900;
+    margin-bottom: rem(20px);
+  }
+}
