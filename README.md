@@ -4,7 +4,9 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 First, run the db.json file and run command:
 
+```
 1: json-server --watch db.json --port 8000
+```
 
 ```bash
 2: npm run dev
