@@ -1,0 +1,11 @@
+{
+    "reactStrictMode": true,
+    "compilerOptions": {
+        "baseUrl": ".",
+        "paths": {
+            "@/components/*":["components/*"],
+            "@/layout/*":["components/layout/*"],
+            "@/*":["./*"],
+        }
+    }
+}
