@@ -2,12 +2,14 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## Getting Started
 
-First, run the development server:
+First, run the db.json file and run command:
+
+1: json-server --watch db.json --port 8000
 
 ```bash
-npm run dev
+2: npm run dev
 # or
-yarn dev
+2: yarn dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
