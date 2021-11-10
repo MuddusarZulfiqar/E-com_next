@@ -1,0 +1,33 @@
+.form-control {
+  border-radius: unset;
+  box-shadow: unset !important;
+  border-width: 2px;
+  padding: rem(10px) rem(35px);
+  &:focus,
+  &:valid {
+    border-color: var(--theme);
+    & + .control-label {
+      top: -1px !important;
+      padding: 0px 7px;
+      background: #fff;
+      color: var(--theme) !important;
+    }
+  }
+}
+.form-group {
+  width: 100%;
+  position: relative;
+  .control-label {
+    position: absolute;
+    left: 25px;
+    top: 17px;
+    transform: translateY(-50%);
+    color: rgba(112, 105, 103, 0.7) !important;
+    font-size: rem(14px);
+    font-weight: 500;
+    transition: 0.2s ease all;
+  }
+}
+textarea {
+  height: 250px !important;
+}

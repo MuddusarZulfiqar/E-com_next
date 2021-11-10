@@ -1,0 +1,23 @@
+a {
+  text-decoration: none !important;
+  color: #4c4441;
+}
+@each $color, $property in $colors {
+  .text-#{$color} {
+    color: #{$property} !important;
+  }
+  .background-#{$color} {
+    background: #{$property} !important;
+  }
+}
+.abs-link {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0;
+  z-index: 1;
+}
+.d-relative {
+  display: relative;
+}

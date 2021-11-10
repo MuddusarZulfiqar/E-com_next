@@ -1,0 +1,47 @@
+@mixin flex($justify: "flex-start", $align: "flex-start") {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+@mixin for-size($size) {
+  @if $size == phone-only {
+    @media (max-width: 599px) {
+      @content;
+    }
+  } @else if $size == tablet-portrait-up {
+    @media (min-width: 600px) {
+      @content;
+    }
+  } @else if $size == tablet-landscape-up {
+    @media (min-width: 900px) {
+      @content;
+    }
+  } @else if $size == desktop-up {
+    @media (min-width: 1200px) {
+      @content;
+    }
+  } @else if $size == big-desktop-up {
+    @media (min-width: 1800px) {
+      @content;
+    }
+  }
+}
+
+@mixin truncate($lines-to-show: 3, $font-size: 16px, $line-height: 1.4) {
+  display: -webkit-box;
+  -webkit-line-clamp: $lines-to-show;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  word-wrap: break-word;
+  text-overflow: ellipsis; /* It will end with ellipsis when text-overflow: ellipsis is included */
+  position: relative;
+  visibility: visible; /* this is a tricky to work correctly at IOS */
+
+  // Fallback for browsers that not support line-clamp
+  @supports not (-webkit-line-clamp: $lines-to-show) {
+    display: block;
+    max-height: $font-size * $line-height * $lines-to-show;
+    line-height: $line-height;
+  }
+}

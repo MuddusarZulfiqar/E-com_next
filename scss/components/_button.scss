@@ -1,0 +1,46 @@
+.btn {
+  border-radius: unset;
+  box-shadow: unset;
+  background: unset;
+  margin: unset;
+  padding: rem(10px) rem(35px);
+  transition: all 0.3s ease;
+  color: #fff !important;
+  font-size: rem(16px);
+  font-weight: 700;
+  text-transform: uppercase;
+  text-decoration: none;
+  &:focus {
+    // border: unset;
+    box-shadow: unset;
+  }
+  &:hover {
+    opacity: 0.7;
+  }
+  @each $color, $property in $colors {
+    &.btn-#{$color} {
+      background: #{$property};
+      @if $color == "white" {
+        color: black !important;
+      }
+      @if $color == "gray" {
+        color: black !important;
+      }
+      @if $color == "black" {
+        color: white !important;
+      }
+    }
+    &.btn-border-#{$color} {
+      border: 2px solid $property;
+      color: black !important;
+      &:hover,
+      &:focus {
+        background: $property;
+        opacity: 1;
+        @if $color == "gray" {
+          color: black !important;
+        }
+      }
+    }
+  }
+}
